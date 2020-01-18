@@ -77,7 +77,7 @@ export class InnerSlider extends React.Component {
       this.props.autoplay && this.autoPlay("update");
     });
     if (this.props.lazyLoad === "progressive") {
-      this.lazyLoadTimer = setInterval(this.progressiveLazyLoad, 2500);
+      this.lazyLoadTimer = setInterval(this.progressiveLazyLoad, 3000);
     }
     this.ro = new ResizeObserver(() => {
       if (this.state.animating) {
@@ -705,7 +705,7 @@ export class InnerSlider extends React.Component {
     let innerSliderProps = {
       className: className,
       dir: "ltr",
-      style:this.props.style
+      style: this.props.style
     };
 
     if (this.props.unslick) {
